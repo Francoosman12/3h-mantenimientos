@@ -1,0 +1,32 @@
+/* Navbar.css */
+.navbar {
+    background-color: #f8f9fa; /* Fondo más claro */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+
+.navbar-brand img {
+    height: 200px; /* Ajusta según el tamaño de tu logo */
+    padding-top: 10px;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.nav-link {
+    color: #333 !important; /* Color de texto de los enlaces */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff !important; /* Color de texto al hacer hover */
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo de enlace al hacer hover */
+    border-radius: 5px; /* Bordes redondeados al hacer hover */
+}
+
+.navbar-toggler-icon {
+    background-image: url('path/to/toggler-icon.svg'); /* Personaliza el icono del toggle si lo deseas */
+}
