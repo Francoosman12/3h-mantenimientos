@@ -4,7 +4,7 @@ import '../styles/Footer.css';
 const Footer = () => (
   <footer>
     <Container>
-      <p>&copy; {new Date().getFullYear()} Mi Empresa. Página creada por Mi Nombre.</p>
+      <p className='descripcion-footer'>&copy; {new Date().getFullYear()} 3H Mantenimiento | Página creada por DevOs.</p>
     </Container>
   </footer>
 );

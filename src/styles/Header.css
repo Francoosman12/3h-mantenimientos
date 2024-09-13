@@ -23,6 +23,7 @@ header {
 .logo1{
     height: 400px;
     width: 400px;
+    margin-top: 150px;
 }
 
 .carousel-caption-fixed {
@@ -34,10 +35,9 @@ header {
     background: rgba(252, 251, 251, 0.8); /* Fondo oscuro para mejorar la legibilidad */
     padding: 40px;
     color: white;
-    display: flex;
-    flex-direction: column;
+    display: block;
     justify-content: center;
-    align-items: flex-end; /* Alinea el contenido a la derecha */
+    align-items: center; /* Alinea el contenido a la derecha */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 1;
     border-top-left-radius: 30%;
@@ -46,7 +46,7 @@ header {
 
 .carousel-caption-fixed h3 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    
     font-weight: bold;
     letter-spacing: 0.05em;
 }
@@ -79,11 +79,13 @@ header {
         height: 100%;
         
     }
+
     .logo1{
         height: 200px;
         width: 200px;
         padding: auto;
-        margin-right: 40px;
+        margin: 40px;
+        
     }
 
     .carousel-caption-fixed {
@@ -93,6 +95,7 @@ header {
         text-align: center;
         border-top-left-radius: 0%;
         border-bottom-left-radius: 0%;
+        position: absolute;
     }
 
     .carousel-caption-fixed h3 {
@@ -100,7 +103,7 @@ header {
     }
 
     .carousel-caption-fixed p {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .carousel-caption-fixed button {
