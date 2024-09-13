@@ -47,7 +47,7 @@ function App() {
       <div className="fade-in">
         <Contact />
       </div>
-      <div className="fade-in">
+      <div className="">
         <Footer />
       </div>
 
