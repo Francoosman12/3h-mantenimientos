@@ -15,7 +15,7 @@ const NavigationBar = () => (
           <Nav.Link href="#services">Servicios</Nav.Link>
           <Nav.Link href="#works">Trabajos</Nav.Link>
           <Nav.Link href="#contact">Contacto</Nav.Link>
-          <Nav.Link href="https://drive.google.com/file/d/1VZmpyasy5_wsQvZKLeAdXrZ1xeBWKUGR/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <Nav.Link href="https://drive.google.com/file/d/1nQ3r5ASUk0ursd4BJ9sq7kCbylrY1Tux/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             Descargar PDF
           </Nav.Link>
         </Nav>
