@@ -53,7 +53,7 @@ function App() {
 
       {/* Botón flotante de WhatsApp */}
       <a
-        href="https://wa.link/1f4gl1" // Reemplaza por tu número de WhatsApp
+        href="https://wa.me/5493813476033"
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"

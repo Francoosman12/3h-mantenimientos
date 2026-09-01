@@ -2,7 +2,8 @@ import '../styles/Navbar.css';
 import { useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { FaDownload } from 'react-icons/fa';
-import logo from '../assets/logo2-navbar.png';
+import BrandMark from './BrandMark';
+import logoJl from '../assets/logo-jl.png';
 
 const NavigationBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,8 @@ const NavigationBar = () => {
     >
       <Container>
         <Navbar.Brand href="#header">
-          <img className="logo-navbar" src={logo} alt="3H Mantenimientos" />
+          <img className="brand-icon" src={logoJl} alt="" />
+          <BrandMark className="logo-navbar" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -34,9 +36,8 @@ const NavigationBar = () => {
             <Nav.Link href="#contact">Contacto</Nav.Link>
             <Nav.Link
               className="nav-link-pdf"
-              href="https://drive.google.com/file/d/1nQ3r5ASUk0ursd4BJ9sq7kCbylrY1Tux/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/instalaciones-jl-presentacion.pdf"
+              download="Instalaciones-JL-Presentacion.pdf"
             >
               <FaDownload className="nav-link-pdf-icon" />
               Descargar PDF

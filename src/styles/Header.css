@@ -52,10 +52,11 @@ header {
 }
 
 .hero-logo {
-  height: 64px;
+  display: block;
+  height: clamp(72px, 9vw, 110px);
   width: auto;
   margin-bottom: 20px;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+  filter: brightness(0) invert(1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
 .hero-eyebrow {
@@ -155,15 +156,19 @@ header {
   .hero {
     min-height: 600px;
     text-align: center;
-    align-items: flex-end;
-    padding-bottom: 64px;
+    align-items: flex-start;
+    /* Safety net: real mobile browsers show 100vh taller than the actual
+       visible area (address bar, etc.), so never let content this tall
+       get silently clipped — worst case it spills a little onto the
+       next section instead of disappearing. */
+    overflow: visible;
   }
 
   .hero-overlay {
     background: linear-gradient(
       180deg,
-      rgba(15, 24, 38, 0.35) 0%,
-      rgba(15, 24, 38, 0.75) 55%,
+      rgba(15, 24, 38, 0.6) 0%,
+      rgba(15, 24, 38, 0.8) 55%,
       rgba(15, 24, 38, 0.95) 100%
     );
   }
@@ -172,16 +177,36 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .hero-logo {
-    height: 44px;
-    margin-bottom: 16px;
+    padding-top: 68px;
+    padding-bottom: 12px;
   }
 
   .hero-title,
   .hero-subtitle {
     max-width: 100%;
+  }
+
+  .hero-logo {
+    height: 64px;
+    margin-bottom: 14px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+    margin-bottom: 14px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 22px;
+  }
+
+  .hero-actions {
+    margin-bottom: 22px;
   }
 
   .hero-actions,
@@ -191,5 +216,36 @@ header {
 
   .hero-scroll-cue {
     display: none;
+  }
+}
+
+/* Extra-compact spacing on short viewports (older/smaller phones) so the
+   whole hero still fits without relying on the overflow-visible spillover. */
+@media (max-width: 768px) and (max-height: 650px) {
+  .hero-content {
+    padding-top: 60px;
+  }
+
+  .hero-logo {
+    height: 48px;
+    margin-bottom: 10px;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 6px;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+
+  .hero-actions {
+    margin-bottom: 14px;
   }
 }

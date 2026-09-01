@@ -18,11 +18,20 @@ footer {
   max-width: 360px;
 }
 
-.footer-logo {
-  height: clamp(22px, 6vw, 32px);
-  width: auto;
-  max-width: 100%;
+.footer-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 16px;
+}
+
+.footer-brand-lockup .brand-icon {
+  height: clamp(30px, 6vw, 40px);
+  filter: brightness(0) invert(1);
+}
+
+.footer-logo {
+  max-width: 100%;
   filter: brightness(0) invert(1);
 }
 
@@ -81,6 +90,17 @@ footer {
 
 .footer-bottom p {
   margin: 0;
+}
+
+.footer-bottom a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: var(--accent-400);
 }
 
 @media (max-width: 576px) {

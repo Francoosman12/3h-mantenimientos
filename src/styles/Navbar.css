@@ -14,18 +14,21 @@
 .navbar-brand {
   display: flex;
   align-items: center;
+  gap: 10px;
   height: auto;
 }
 
+.navbar-brand .brand-icon {
+  height: clamp(28px, 8vw, 40px);
+}
+
 .logo-navbar {
-  height: clamp(24px, 7vw, 40px);
-  width: auto;
   max-width: 60vw;
-  margin-right: 10px;
   filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
   transition: filter var(--transition);
 }
 
+.navbar-scrolled .brand-icon,
 .navbar-scrolled .logo-navbar {
   filter: none;
 }
@@ -85,6 +88,37 @@
 }
 
 @media (max-width: 991px) {
+  /* Below the collapse breakpoint the navbar always sits solid, never
+     transparent-over-hero — content is too dense there for a see-through
+     bar, and a transparent state can visually collide with hero content
+     sitting right behind it. */
+  .navbar {
+    background: rgba(247, 248, 250, 0.96);
+    box-shadow: var(--shadow-sm);
+    padding: 10px 0;
+  }
+
+  .navbar .brand-icon,
+  .navbar .logo-navbar {
+    filter: none;
+  }
+
+  /* The toggler's variant-based icon (from Navbar variant="dark") assumes
+     a dark background; force the dark (navy) hamburger lines to match
+     the always-solid mobile bar regardless of scroll state. */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231b2a44' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+
+  .nav-link {
+    color: var(--navy-800) !important;
+  }
+
+  .nav-link:hover {
+    color: var(--accent-600) !important;
+    background-color: rgba(242, 153, 74, 0.1);
+  }
+
   .navbar-collapse.show,
   .navbar-collapse.collapsing {
     background: var(--bg);

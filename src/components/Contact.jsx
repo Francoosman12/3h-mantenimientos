@@ -20,7 +20,7 @@ const Contact = () => {
     const subject = `Presupuesto solicitado por ${name}`;
     const body = `Hola, me llamo ${name}.\n\nMe gustaría solicitar un presupuesto.\n\nDetalles de contacto:\nEmail: ${email}\nCelular: ${phone}\n\nMensaje:\n${message}`;
     
-    return `mailto:carlosesteban_migliori@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `mailto:Luis.diaz.migliori@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -89,15 +89,15 @@ const Contact = () => {
             <h3 className="contact-info-title">Nuestros datos</h3>
             <div className="contact-info-item">
               <FaMapMarkerAlt className="contact-info-icon" />
-              <p><strong>Dirección</strong><br />B° los Lapachos – LT 7 Alderetes, Tucumán – C.P.: 4178</p>
+              <p><strong>Dirección</strong><br />Pasaje Baaclini 432</p>
             </div>
             <div className="contact-info-item">
               <FaPhoneAlt className="contact-info-icon" />
-              <p><strong>Teléfono</strong><br />(381) 155052424</p>
+              <p><strong>Teléfono</strong><br />+54 9 3813 47-6033</p>
             </div>
             <div className="contact-info-item">
               <FaEnvelope className="contact-info-icon" />
-              <p><strong>Email</strong><br />carlosesteban_migliori@hotmail.com</p>
+              <p><strong>Email</strong><br />Luis.diaz.migliori@gmail.com</p>
             </div>
             <iframe
               title="Mapa"

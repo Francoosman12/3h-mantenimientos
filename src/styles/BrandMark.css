@@ -1,0 +1,35 @@
+.brand-mark {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--navy-800);
+  line-height: 1;
+}
+
+.brand-mark-jl {
+  color: var(--accent-500);
+  font-weight: 700;
+}
+
+.logo-navbar.brand-mark {
+  font-size: clamp(1rem, 4vw, 1.4rem);
+}
+
+.footer-logo.brand-mark {
+  font-size: clamp(1rem, 4vw, 1.3rem);
+}
+
+/* Real logo mark (icon) paired with the BrandMark text in tight spots
+   like the navbar/footer, where the icon's own internal wordmark is too
+   small to read. On dark/transparent backgrounds it renders as a plain
+   white silhouette; toggled back to full color once there's a light
+   background behind it (see .navbar-scrolled override in Navbar.css). */
+.brand-icon {
+  display: block;
+  width: auto;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+  transition: filter var(--transition);
+}

@@ -6,26 +6,26 @@ import { FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
 import image1 from '../assets/image1.jpeg';
 import image2 from '../assets/image2.jpeg';
 import image3 from '../assets/image3.jpeg';
-import logo1 from '../assets/logo1.png';
+import logoJl from '../assets/logo-jl.png';
 
 const Header = () => (
   <header id="header">
     <div className="hero">
       <Carousel controls={false} indicators={false} interval={4000} pause={false} fade className="hero-carousel">
         <Carousel.Item>
-          <img className="d-block w-100" src={image1} alt="Trabajo de mantenimiento realizado por 3H" />
+          <img className="d-block w-100" src={image1} alt="Trabajo realizado por Instalaciones JL" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={image2} alt="Trabajo de mantenimiento realizado por 3H" />
+          <img className="d-block w-100" src={image2} alt="Trabajo realizado por Instalaciones JL" />
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={image3} alt="Trabajo de mantenimiento realizado por 3H" />
+          <img className="d-block w-100" src={image3} alt="Trabajo realizado por Instalaciones JL" />
         </Carousel.Item>
       </Carousel>
       <div className="hero-overlay" />
 
       <div className="hero-content">
-        <img className="hero-logo" src={logo1} alt="3H Mantenimientos" />
+        <img className="hero-logo" src={logoJl} alt="Instalaciones JL" />
         <span className="hero-eyebrow">Más de 12 años de trayectoria</span>
         <h1 className="hero-title">Mantenimiento y reparaciones de confianza</h1>
         <p className="hero-subtitle">
