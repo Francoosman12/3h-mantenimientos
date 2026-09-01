@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import '../styles/Contact.css';
 
 const Contact = () => {
@@ -25,7 +26,13 @@ const Contact = () => {
   return (
     <section id="contact">
       <Container>
-        <h2>Contacto</h2>
+        <div className="section-header">
+          <span className="section-eyebrow">Hablemos</span>
+          <h2 className="section-title">Contacto</h2>
+          <p className="section-subtitle">
+            Contanos qué necesitás y te respondemos a la brevedad con tu presupuesto.
+          </p>
+        </div>
         <div className="contact-content">
           <div className="contact-form">
             <Form>
@@ -73,20 +80,25 @@ const Contact = () => {
                   required
                 />
               </Form.Group>
-              <Button className="mt-4" variant="primary">
-                <a
-                  href={createMailToLink()} // Aquí generamos el link mailto
-                  style={{ color: 'white', textDecoration: 'none' }}
-                >
-                  Enviar correo
-                </a>
+              <Button className="mt-4" variant="primary" href={createMailToLink()}>
+                Enviar correo
               </Button>
             </Form>
           </div>
           <div className="contact-info">
-            <p><strong>Dirección:</strong> B° los Lapachos – LT 7 Alderetes, Tucumán – C.P.: 4178</p>
-            <p><strong>Teléfono:</strong> (381) 155052424</p>
-            <p><strong>Email:</strong> carlosesteban_migliori@hotmail.com</p>
+            <h3 className="contact-info-title">Nuestros datos</h3>
+            <div className="contact-info-item">
+              <FaMapMarkerAlt className="contact-info-icon" />
+              <p><strong>Dirección</strong><br />B° los Lapachos – LT 7 Alderetes, Tucumán – C.P.: 4178</p>
+            </div>
+            <div className="contact-info-item">
+              <FaPhoneAlt className="contact-info-icon" />
+              <p><strong>Teléfono</strong><br />(381) 155052424</p>
+            </div>
+            <div className="contact-info-item">
+              <FaEnvelope className="contact-info-icon" />
+              <p><strong>Email</strong><br />carlosesteban_migliori@hotmail.com</p>
+            </div>
             <iframe
               title="Mapa"
               src="https://www.google.com/maps/embed?pb=..."

@@ -1,0 +1,47 @@
+:root {
+  /* Brand — navy (from logo) */
+  --navy-900: #0f1826;
+  --navy-800: #1b2a44;
+  --navy-700: #223a5e;
+  --navy-600: #2c3c56;
+  --navy-500: #3d5474;
+  --navy-100: #eef1f6;
+
+  /* Accent — warm signal orange */
+  --accent-400: #f6ad6b;
+  --accent-500: #f2994a;
+  --accent-600: #d97a2c;
+
+  /* Neutrals */
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --border: #e4e7ec;
+  --text: #1a2233;
+  --text-muted: #5b6472;
+  --text-on-dark: #eef1f6;
+  --text-on-dark-muted: #a7b0c0;
+
+  /* Elevation */
+  --shadow-sm: 0 2px 8px rgba(15, 24, 38, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 24, 38, 0.1);
+  --shadow-lg: 0 16px 40px rgba(15, 24, 38, 0.16);
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: 0.3s var(--ease);
+
+  /* Layout */
+  --container-max: 1200px;
+  --section-padding: 96px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 56px;
+  }
+}

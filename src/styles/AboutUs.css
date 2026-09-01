@@ -1,90 +1,79 @@
 #about {
-    min-height: 100vh;
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
-
-h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #333;
-    font-weight: bold;
+  padding: var(--section-padding) 0;
+  background-color: var(--surface);
 }
 
 /* Contenedor para las tarjetas */
 .about-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 /* Estilos para las tarjetas (cards) */
 .about-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 20px;
-    text-align: center;
-    flex: 1;
-    min-width: 300px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  padding: 32px;
+  text-align: left;
+  flex: 1;
+  min-width: 300px;
+  max-width: 480px;
 }
 
 .about-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.about-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--navy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .about-icon {
-    font-size: 3rem;
-    color: #007bff;
-    margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: var(--accent-400);
 }
 
-.about-card h3, .about-card .card-title {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #333;
+.about-card .card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  color: var(--navy-800);
+  font-weight: 600;
 }
 
-.about-card p, .about-card .card-text {
-    font-size: 1.1rem;
-    color: #555;
+.about-card .card-text {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-muted);
 }
 
-#about video {
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+.about-cta {
+  text-align: center;
+  margin-top: 40px;
 }
 
 /* Estilo responsive para pantallas pequeñas */
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .about-card {
-        width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-        margin-bottom: 20px;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .about-icon {
-        font-size: 2.5rem;
-    }
-
-    .about-card h3 {
-        font-size: 1.5rem;
-    }
-
-    .about-card p {
-        font-size: 1rem;
-    }
+  .about-card {
+    width: 100%;
+    max-width: 100%;
+  }
 }

@@ -1,8 +1,136 @@
+@import './styles/variables.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  overflow-x: hidden; /* Evita el scroll horizontal */
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+img, iframe, video, svg {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--navy-800);
+}
+
+::selection {
+  background: var(--accent-500);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-500);
+  border-radius: 10px;
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent-400);
+  outline-offset: 2px;
+}
+
+/* Section title used across sections */
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-600);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--navy-800);
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 48px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Bootstrap button overrides to match brand */
+.btn-primary {
+  --bs-btn-bg: var(--accent-500);
+  --bs-btn-border-color: var(--accent-500);
+  --bs-btn-hover-bg: var(--accent-600);
+  --bs-btn-hover-border-color: var(--accent-600);
+  --bs-btn-active-bg: var(--accent-600);
+  --bs-btn-active-border-color: var(--accent-600);
+  --bs-btn-focus-shadow-rgb: 242, 153, 74;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 12px 28px;
+  border-radius: 999px;
+  transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--navy-600);
+  --bs-btn-color: var(--navy-700);
+  --bs-btn-hover-bg: var(--navy-700);
+  --bs-btn-hover-border-color: var(--navy-700);
+  --bs-btn-hover-color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border-width: 2px;
+  transition: all var(--transition);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
 }

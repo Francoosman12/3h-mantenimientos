@@ -1,46 +1,48 @@
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Card, Button } from 'react-bootstrap';
 import { FaUsers, FaBullseye } from 'react-icons/fa';
 import '../styles/AboutUs.css';
 
 const AboutUs = () => (
   <section id="about">
     <Container>
-      <h2>Quienes Somos</h2>
+      <div className="section-header">
+        <span className="section-eyebrow">Quiénes somos</span>
+        <h2 className="section-title">Una empresa familiar con experiencia</h2>
+        <p className="section-subtitle">
+          Más de 12 años de trayectoria brindando seguridad y confianza a nuestros clientes.
+        </p>
+      </div>
       <div className="about-content">
         <Card className="about-card">
-          <FaUsers className="about-icon" />
+          <div className="about-icon-wrap">
+            <FaUsers className="about-icon" />
+          </div>
           <Card.Body>
             <Card.Title>Una Empresa Familiar</Card.Title>
             <Card.Text>
-           Con más de 12 años de trayectoria que a 
-crecido generando seguridad y confianza, brindando distintos 
-servicios a nuestros clientes con el conocimiento y la capacidad de 
-maquinarias y equipos de seguridad para los diversos trabajos a 
-realizar. Estamos compuesto por un equipo de trabajo capacitado en 
-cada área y a su vez cuentan con cursos de seguridad e higiene y 
-cursos de capacitaciones.
+              Hemos crecido generando seguridad y confianza, brindando distintos servicios a
+              nuestros clientes con el conocimiento y la capacidad de maquinarias y equipos de
+              seguridad para los diversos trabajos a realizar. Contamos con un equipo capacitado
+              en cada área, con cursos de seguridad e higiene y capacitaciones constantes.
             </Card.Text>
           </Card.Body>
         </Card>
         <Card className="about-card">
-          <FaBullseye className="about-icon" />
+          <div className="about-icon-wrap">
+            <FaBullseye className="about-icon" />
+          </div>
           <Card.Body>
             <Card.Title>Nuestro Objetivo</Card.Title>
             <Card.Text>
-              Nuestro objetivo es ofrecer servicios de alta calidad, garantizando tiempo, calidad y precio, siempre con trabajos garantizados.
+              Ofrecer servicios de alta calidad, garantizando tiempo, calidad y precio, siempre
+              con trabajos garantizados de principio a fin.
             </Card.Text>
           </Card.Body>
         </Card>
       </div>
-      <Button className='mt-4' href="/equipo" variant="secondary">Conocé a nuestro Equipo</Button>
-      <Row className="mt-3">
-        <Col md={12}>
-          <video width="100%" controls>
-            <source src="ruta-del-video.mp4" type="video/mp4" />
-            Tu navegador no soporta video.
-          </video>
-        </Col>
-      </Row>
+      <div className="about-cta">
+        <Button href="/equipo" variant="secondary">Conocé a nuestro equipo</Button>
+      </div>
     </Container>
   </section>
 );

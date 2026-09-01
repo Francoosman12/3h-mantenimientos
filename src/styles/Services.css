@@ -1,81 +1,72 @@
 #services {
-    padding: 60px 0;
-    background-color: #f8f9fa; /* Color de fondo opcional */
+  padding: var(--section-padding) 0;
+  background-color: var(--bg);
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 32px 24px;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-500);
+}
+
+.service-icon-wrap {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--navy-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition);
+}
+
+.service-card:hover .service-icon-wrap {
+  background: var(--accent-500);
+}
+
+.service-icon {
+  font-size: 1.9rem;
+  color: var(--navy-700);
+  transition: color var(--transition);
+}
+
+.service-card:hover .service-icon {
+  color: #fff;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--navy-800);
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.services-cta {
+  text-align: center;
+  margin-top: 44px;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 28px 20px;
   }
-  
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    padding: 40px;
-  }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .col-md-4 {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-    margin-bottom: 20px; /* Espaciado vertical entre columnas */
-  }
-  
-  .col-md-4:hover {
-    transform: translateY(-10px);
-  }
-  
-  .service-icon {
-    font-size: 3rem;
-    color: #2C3C56; /* Color del ícono opcional */
-    margin-bottom: 15px;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1rem;
-    color: #6c757d; /* Color del texto opcional */
-  }
-  
-  @media (max-width: 768px) {
-    .row {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .col-md-4 {
-      width: 90%;
-    }
-  
-    h2 {
-      font-size: 2rem;
-    }
-  
-    .service-icon {
-      font-size: 2rem;
-    }
-  
-    h3 {
-      font-size: 1.25rem;
-    }
-  
-    p {
-      font-size: 0.875rem;
-    }
-  }
-  
+}

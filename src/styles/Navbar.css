@@ -1,32 +1,118 @@
-/* Navbar.css */
 .navbar {
-    background-color: #f8f9fa; /* Fondo más claro */
+  background: linear-gradient(180deg, rgba(15, 24, 38, 0.65) 0%, rgba(15, 24, 38, 0) 100%);
+  padding: 16px 0;
+  transition: background-color var(--transition), background var(--transition), box-shadow var(--transition), padding var(--transition);
+}
+
+.navbar-scrolled {
+  background: rgba(247, 248, 250, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+  padding: 4px 0;
 }
 
 .navbar-brand {
-    display: flex;
-    align-items: center;
-    height: 40px;
+  display: flex;
+  align-items: center;
+  height: auto;
 }
 
+.logo-navbar {
+  height: clamp(24px, 7vw, 40px);
+  width: auto;
+  max-width: 60vw;
+  margin-right: 10px;
+  filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+  transition: filter var(--transition);
+}
 
-.navbar-brand img {
-    height: 200px; /* Ajusta según el tamaño de tu logo */
-    padding-top: 10px;
-    margin-right: 10px; /* Espacio entre el logo y el texto */
+.navbar-scrolled .logo-navbar {
+  filter: none;
 }
 
 .nav-link {
-    color: #333 !important; /* Color de texto de los enlaces */
-    transition: color 0.3s ease, background-color 0.3s ease;
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 8px 16px !important;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.navbar-scrolled .nav-link {
+  color: var(--navy-800) !important;
 }
 
 .nav-link:hover {
-    color: #007bff !important; /* Color de texto al hacer hover */
-    background-color: rgba(0, 123, 255, 0.1); /* Fondo de enlace al hacer hover */
-    border-radius: 5px; /* Bordes redondeados al hacer hover */
+  color: var(--accent-400) !important;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
-.navbar-toggler-icon {
-    background-image: url('path/to/toggler-icon.svg'); /* Personaliza el icono del toggle si lo deseas */
+.navbar-scrolled .nav-link:hover {
+  color: var(--accent-600) !important;
+  background-color: rgba(242, 153, 74, 0.1);
+}
+
+.nav-link-pdf {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  color: #fff !important;
+  background-color: var(--navy-700);
+  margin-left: 6px;
+}
+
+.nav-link-pdf:hover {
+  background-color: var(--accent-600) !important;
+  color: #fff !important;
+}
+
+/* .nav-link-pdf is always a solid navy pill, so its text must stay white
+   regardless of scroll/mobile state — these re-assert over the more
+   specific .navbar-scrolled/.navbar-collapse .nav-link color rules. */
+.navbar-scrolled .nav-link-pdf,
+.navbar-scrolled .nav-link-pdf:hover {
+  color: #fff !important;
+}
+
+.nav-link-pdf-icon {
+  font-size: 0.85rem;
+}
+
+.navbar-toggler {
+  border: none;
+  box-shadow: none !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    background: var(--bg);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    margin-top: 10px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .navbar-collapse.show .nav-link,
+  .navbar-collapse.collapsing .nav-link {
+    color: var(--navy-800) !important;
+  }
+
+  .navbar-collapse.show .nav-link:hover,
+  .navbar-collapse.collapsing .nav-link:hover {
+    color: var(--accent-600) !important;
+    background-color: rgba(242, 153, 74, 0.1);
+  }
+
+  .navbar-collapse.show .nav-link-pdf,
+  .navbar-collapse.collapsing .nav-link-pdf {
+    color: #fff !important;
+  }
+
+  .nav-link-pdf {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }

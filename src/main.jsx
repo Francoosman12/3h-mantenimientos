@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap aquí
+import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap primero: nuestros estilos deben poder sobreescribirlo
 import './index.css';
+import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
